@@ -14,9 +14,6 @@ public class RemoveDuplicates {
         }
     }
 
-
-
-
     public static void main(String[] args) {
         removeDup("visssshhhhhuuuuu", 0, new StringBuilder(), new boolean[26]);
     }
