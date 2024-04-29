@@ -3,15 +3,15 @@ public class Tiling {
     // A tile can be placed vertically or horizontally.   
 
     public static int tillingProb(int n){
-
         if(n == 0 || n == 1){
             return 1;
         }
 
-        int vertical = tillingProb(n - 1);
-        int horizontal = tillingProb(n - 2);
-        int ans = vertical + horizontal;
-        return ans;
+        // int vertical = tillingProb(n - 1);
+        // int horizontal = tillingProb(n - 2);
+        // int ans = vertical + horizontal;
+        // return ans;
+        return tillingProb(n - 1) + tillingProb(n - 2);
     }
 
 

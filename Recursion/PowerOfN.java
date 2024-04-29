@@ -24,7 +24,7 @@ public class PowerOfN {
 
     public static void main(String[] args) {
         // System.out.println(power(1000, 10));
-        System.out.println(optimizedPower(1000, 10));
+        System.out.println(optimizedPower(3, 3));
     }
     
 }
