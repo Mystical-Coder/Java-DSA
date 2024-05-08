@@ -28,7 +28,9 @@ public class Nqueens {
 
     public static void getSolution(char[][] board, int row){
         if(row == board.length){
-            printBoard(board);
+            // Count Number of ways
+            count++;
+            // printBoard(board);
             return;
         }
         // Add one queen in each row
@@ -40,7 +42,7 @@ public class Nqueens {
             }
         }
     }
-
+    static int count = 0;
     public static void printBoard(char[][] board){
         System.out.println("----------- Chess board ---------------");
         for(int i = 0; i < board.length; i++){
@@ -52,7 +54,8 @@ public class Nqueens {
     }
     // Time complexity = O(n!)
     public static void main(String[] args) {
-        int n = 4;
+        // int n = 5; // 10 ways
+        int n = 4 ;//2 ways
         char[][] board = new char[n][n];
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
@@ -60,5 +63,6 @@ public class Nqueens {
             }
         }
         getSolution(board, 0);
+        System.out.println("Total number of ways "+count);
     }
 }
