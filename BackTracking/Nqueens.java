@@ -42,7 +42,28 @@ public class Nqueens {
             }
         }
     }
+
+    // ---------------------- is Any solution possible -------------------------------------------
+
+    public static boolean anyPossibleSol(char[][] board, int row){
+        if(row == board.length){
+            return true;
+        }
+        // Add one queen in each row
+        for(int i = 0; i < board.length; i++){
+            if(isSafe(board, row, i)){  // Use to check the queen is safe in particular cell
+                board[row][i] = 'Q';
+                if(anyPossibleSol(board, row+1)){
+                    return true;
+                }
+                board[row][i] = 'X';  // Backtracking
+            }
+        }
+        return false;
+    }
+
     static int count = 0;
+    // ------------------------------ Print chess board --------------------------------------
     public static void printBoard(char[][] board){
         System.out.println("----------- Chess board ---------------");
         for(int i = 0; i < board.length; i++){
@@ -52,6 +73,9 @@ public class Nqueens {
             System.out.println();
         }
     }
+
+    // ------------------------------------------------------------------------------------------
+
     // Time complexity = O(n!)
     public static void main(String[] args) {
         // int n = 5; // 10 ways
@@ -62,7 +86,19 @@ public class Nqueens {
                 board[i][j]='x';
             }
         }
-        getSolution(board, 0);
-        System.out.println("Total number of ways "+count);
+
+        // --------------------------- Is any solution possible -------------------------------
+
+        if(anyPossibleSol(board, 0)){
+            System.out.println("Solution is possible");
+            printBoard(board);
+        }else{
+            System.out.println("Solution is not possible");
+        }
+
+        // -------------------------------------------------------------------------------------------
+
+        // getSolution(board, 0);
+        // System.out.println("Total number of ways "+count);
     }
 }
