@@ -10,7 +10,7 @@ public class BitOperation {
 
     public static int setBit(int val, int i){
         int bitMask = 1 << i;
-        return val + bitMask;
+        return val | bitMask;
     }
 
     public static int clearIthBit(int val, int i){
