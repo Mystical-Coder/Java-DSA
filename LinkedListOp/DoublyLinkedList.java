@@ -57,15 +57,27 @@ public class DoublyLinkedList {
         System.out.println("null");
     }
 
+    public void reverseLL(){
+        Node curr = head;
+        Node prev = null;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
+            prev = curr;
+            curr =next;
+        }
+       head = prev;
+    }
+
     public static void main(String[] args) {
         DoublyLinkedList ll = new DoublyLinkedList();
         ll.addFirst(3);
         ll.addFirst(2);
         ll.addFirst(1);
         ll.printLL();
-        System.out.println(ll.size);
-        System.out.println(ll.removeFirst());
+        ll.reverseLL();
         ll.printLL();
-        System.out.println(ll.size);
     }
 }
