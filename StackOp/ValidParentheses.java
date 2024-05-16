@@ -29,7 +29,6 @@ public class ValidParentheses {
         return true;
     }
 
-
     public static void main(String[] args) {
         String str = "[][][][[[]]]";
         if(isValid(str)){
