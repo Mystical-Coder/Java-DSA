@@ -95,7 +95,7 @@ public class MergsortLinkedList {
         mid.next = null;
         Node newLeft = mergeSort(head);
         Node newRight = mergeSort(right);
-        return merge(newLeft, newRight);
+        return merge(newLeft, newRight);    
     }
     
     public static void main(String[] args) {
