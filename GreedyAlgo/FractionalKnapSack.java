@@ -3,8 +3,6 @@ package GreedyAlgo;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import BackTracking.Array;
-
 public class FractionalKnapSack {
 
     public static void main(String[] args) {
