@@ -30,7 +30,7 @@ public class SortClass {
         // Arrays.sort(stud, Comparator.comparingInt(s -> s.rollnum));
         // Arrays.sort(stud, Comparator.comparingInt((Student s) -> s.rollnum).reversed());
 
-        // Arrays.sort(stud, (a ,b) -> a.rollnum - b.rollnum); //Asc
+        Arrays.sort(stud, (a ,b) -> a.rollnum - b.rollnum); //Asc
         // Arrays.sort(stud, (a ,b) -> b.rollnum - a.rollnum); // Desc
 
 
