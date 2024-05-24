@@ -3,9 +3,8 @@ package Notes.ComparableAndComparator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
-
-import BackTracking.Array;
 
 public class School {
 
@@ -29,10 +28,11 @@ public class School {
 
 
     public static void test2(){
-        double[][] arr = {{1,2},{3,4},{1,1},{8,2}};
-        Arrays.sort(arr, (a, b) -> Double.compare(b[0], a[0]));
-        for(int i = 0; i < arr.length; i++){
-            System.out.println(arr[i][0]+" "+arr[i][1]);
+        int[][] arr = { { 100, 24 }, { 39, 60 }, { 5, 28 }, { 27, 40 }, { 1, 90 } };
+        // Arrays.sort(arr, Comparator.comparingInt(o -> o[0]));
+        // Arrays.sort(arr, (a, b) -> a[1] - b[1]);
+        for(int[] a : arr){
+            System.out.println(a[0] + " "+a[1]);
         }
     }
 
@@ -46,6 +46,6 @@ public class School {
     }
 
     public static void main(String[] args) {
-       test3();
+        test3();
     }
 }
