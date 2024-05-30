@@ -5,8 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import javax.swing.tree.TreeNode;
-
 public class BT {
 
     static class Node {
@@ -115,8 +113,9 @@ public class BT {
             return result;
         }
 
-        public static int countNode(Node root){
-            if(root == null) return 0;
+        public static int countNode(Node root) {
+            if (root == null)
+                return 0;
             int lh = countNode(root.left);
             int rh = countNode(root.right);
             return lh + rh + 1;
