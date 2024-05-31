@@ -14,33 +14,40 @@ public class MinDistance {
         }
     }
 
-    public static Node lca(Node root, int n1, int n2){
-        if(root == null || root.data == n1 || root.data == n2) return root;
+    public static Node lca(Node root, int n1, int n2) {
+        if (root == null || root.data == n1 || root.data == n2)
+            return root;
 
         Node leftLca = lca(root.left, n1, n2);
         Node rightLca = lca(root.right, n1, n2);
-        if(leftLca == null) return rightLca;
-        if(rightLca == null)  return leftLca;
+        if (leftLca == null)
+            return rightLca;
+        if (rightLca == null)
+            return leftLca;
         return root;
     }
 
-    public static int lcadist(Node root, int n){
-        if(root == null){
+    public static int lcadist(Node root, int n) {
+        if (root == null) {
             return -1;
         }
-        if(root.data == n) return 0;
+        if (root.data == n)
+            return 0;
         int leftdist = lcadist(root.left, n);
         int rightdist = lcadist(root.right, n);
-        if(leftdist == -1 && rightdist == -1) return -1;
-        else if(leftdist == -1) return rightdist + 1;
-        else return leftdist + 1;
+        if (leftdist == -1 && rightdist == -1)
+            return -1;
+        else if (leftdist == -1)
+            return rightdist + 1;
+        else
+            return leftdist + 1;
     }
 
-    public static int distance(Node root, int n1, int n2){
+    public static int distance(Node root, int n1, int n2) {
         Node flca = lca(root, n1, n2);
         int dist1 = lcadist(flca, n1);
         int dist2 = lcadist(flca, n2);
-        return dist1 + dist2; 
+        return dist1 + dist2;
     }
 
     public static void main(String[] args) {
