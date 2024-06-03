@@ -53,7 +53,7 @@ public class BTisSubTree {
 
         Node subtree = new Node(2);
         subtree.left = new Node(4);
-        // subtree.right = new Node(5);
+        subtree.right = new Node(5);
         System.out.println(isSubTree(root, subtree));
     }
 }
