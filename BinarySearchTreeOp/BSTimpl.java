@@ -86,7 +86,7 @@ public class BSTimpl {
             printRange(root.left, k1, k2);
             System.out.print(root.data+" ");
             printRange(root.right, k1, k2);
-        }else if(root.data < k1){
+        }else if(root.data >= k1){
             printRange(root.left, k1, k2);
         }else{
             printRange(root.right, k1, k2);
