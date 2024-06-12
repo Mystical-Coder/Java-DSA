@@ -60,8 +60,8 @@ public class HeapImp {
         }
 
     }
-
-    public static void main(String[] args) {
+    // Min heap implementation
+    public static void main(String[] args) { 
         Heap heap = new Heap();
        heap.add(3);
        heap.add(4);
