@@ -57,7 +57,7 @@ public class CheckBipartiteGraph {
                         }
                     }
                 }
-            }
+            }   
         }
         return true;
     }
