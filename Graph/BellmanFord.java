@@ -42,8 +42,8 @@ public class BellmanFord {
         int V = graph.length;
         for (int i = 0; i < V - 1; i++) {
             // edges - O(E)
-            for (int j = 0; j < V; i++) {
-                for (int k = 0; k < graph[j].size(); i++) {
+            for (int j = 0; j < V; j++) {
+                for (int k = 0; k < graph[j].size(); k++) {
                     Edge e = graph[j].get(k);
                     int u = e.source;
                     int v = e.destination;
@@ -54,11 +54,9 @@ public class BellmanFord {
                 }
             }
         }
-
         for (int i = 0; i < dist.length; i++) {
             System.out.print(dist[i] + " ");
         }
-
     }
 
     public static void main(String[] args) {
