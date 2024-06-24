@@ -12,14 +12,14 @@ public class DisjointSetUnion {
         }
     }
 
-    public static int find(int x) {
+    public static int find(int x) { // O(1)
         if (x == par[x]) {
             return x;
         }
         return par[x] = find(par[x]);
     }
 
-    public static void union(int a, int b) {
+    public static void union(int a, int b) { // O(1)
         int parA = find(a);
         int parB = find(b);
         if (rank[parA] == rank[parB]) {
