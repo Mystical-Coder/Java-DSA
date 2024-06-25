@@ -75,6 +75,6 @@ public class BridgeInGraph {
         int v = 6;
         ArrayList<Edge> graph[] = new ArrayList[v];
         createGraph(graph);
-        getBridge(graph, v);
+        tarjanBridge(graph, v);
     }
 }
