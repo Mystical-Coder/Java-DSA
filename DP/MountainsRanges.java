@@ -1,7 +1,7 @@
 package DP;
 
 public class MountainsRanges {
-    public static int getCatTabulation(int n) {
+    public static int getCatalansTabulation(int n) {
         int[] dp = new int[n + 1];
         dp[0] = 1;
         dp[1] = 1;
@@ -15,6 +15,6 @@ public class MountainsRanges {
 
     public static void main(String[] args) {
         int n = 4;
-        System.out.println(getCatTabulation(n));
+        System.out.println(getCatalansTabulation(n));
     }
 }
