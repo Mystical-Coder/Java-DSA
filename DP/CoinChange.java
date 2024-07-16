@@ -26,13 +26,13 @@ public class CoinChange {
     }
 
     public static void main(String[] args) {
-        // int[] coins = { 1, 2, 3 };
-        // int sum = 4; // ans = 4
+        int[] coins = { 1, 2, 3 };
+        int sum = 4; // ans = 4
         // int[] coins = {2, 5, 3, 6};
         // int sum = 10;
         // System.out.println(change(coins, sum));
-        int[] coins = {1, 2, 5};
-        int sum = 11;
+        // int[] coins = {1, 2, 5};
+        // int sum = 11;
         System.out.println(change(coins, sum));
     }
 }
