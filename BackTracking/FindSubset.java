@@ -7,7 +7,6 @@ public class FindSubset {
             System.out.println(ans);
             return;
         }
-
         subset(str, ans+str.charAt(i), i + 1);
         subset(str, ans, i+1);
     }
