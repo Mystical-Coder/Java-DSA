@@ -29,6 +29,6 @@ public class KthLevel {
         root.left.right = new Node(5);
         root.right.left = new Node(6);
         root.right.right = new Node(7);
-        kthLevel(root, 1, 2);
+        kthLevel(root, 1, 3);
     }
 }

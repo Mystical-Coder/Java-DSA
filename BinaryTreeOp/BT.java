@@ -121,6 +121,38 @@ public class BT {
             return lh + rh + 1;
         }
 
+        public static int countNodeOptimal(Node root) {
+            if (root == null) {
+                return 0;
+            }
+
+            int lh = findLeftHeight(root);
+            int rh = findRightHeight(root);
+
+            if (lh == rh) {
+                return (1 << lh) - 1;
+            }
+            return countNodeOptimal(root.left) + countNodeOptimal(root.right) + 1;
+        }
+
+        public static int findLeftHeight(Node node) {
+            int height = 0;
+            while (node != null) {
+                height++;
+                node = node.left;
+            }
+            return height;
+        }
+
+        public static int findRightHeight(Node node) {
+            int height = 0;
+            while (node != null) {
+                height++;
+                node = node.right;
+            }
+            return height;
+        }
+
     }
 
     public static void main(String[] args) {
@@ -131,7 +163,8 @@ public class BT {
 
         // binaryTree.postOrder(root);
         // binaryTree.levelOrder(root);
-        System.out.println(binaryTree.height(root));
+        // System.out.println(binaryTree.height(root));
         // System.out.println(binaryTree.countNode(root));
+        System.out.println(binaryTree.countNodeOptimal(root));
     }
 }
