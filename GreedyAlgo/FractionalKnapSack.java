@@ -13,7 +13,7 @@ public class FractionalKnapSack {
         double[][] ratio = new double[weight.length][2];
         for(int i = 0; i < weight.length; i++){
             ratio[i][0] = i;
-            ratio[i][1] = value[i] / (double)weight[i];
+            ratio[i][1] = value[i] / (double)weight[i]; 
         }
         Arrays.sort(ratio, Comparator.comparingDouble(o -> o[1]));
         int capacity = w;
