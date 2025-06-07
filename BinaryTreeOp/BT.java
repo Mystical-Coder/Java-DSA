@@ -162,7 +162,7 @@ public class BT {
         // binaryTree.preorder(root);
 
         // binaryTree.postOrder(root);
-        // binaryTree.levelOrder(root);
+        binaryTree.levelOrder(root);
         // System.out.println(binaryTree.height(root));
         // System.out.println(binaryTree.countNode(root));
         System.out.println(binaryTree.countNodeOptimal(root));
