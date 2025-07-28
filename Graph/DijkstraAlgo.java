@@ -1,6 +1,7 @@
 package Graph;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class DijkstraAlgo {
@@ -38,7 +39,6 @@ public class DijkstraAlgo {
     public static class Pair implements Comparable<Pair> {
         int n;
         int path;
-
         public Pair(int n, int path) {
             this.n = n;
             this.path = path;
@@ -52,11 +52,13 @@ public class DijkstraAlgo {
 
     public static void dijkstra(ArrayList<Edge>[] graph, int source) {
         int[] dist = new int[graph.length];
-        for (int i = 0; i < graph.length; i++) {
-            if (i != source) {
-                dist[i] = Integer.MAX_VALUE;
-            }
-        }
+
+        // for (int i = 0; i < graph.length; i++) {
+        //     if (i != source) {
+        //         dist[i] = Integer.MAX_VALUE;
+        //     }
+        // }
+        Arrays.fill(dist, Integer.MAX_VALUE);
         PriorityQueue<Pair> pq = new PriorityQueue<>();
         boolean[] visited = new boolean[graph.length];
         pq.add(new Pair(source, 0));

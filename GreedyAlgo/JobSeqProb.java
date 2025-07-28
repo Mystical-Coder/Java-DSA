@@ -3,7 +3,6 @@ package GreedyAlgo;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import BackTracking.Array;
 
 public class JobSeqProb {
 

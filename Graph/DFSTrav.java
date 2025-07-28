@@ -55,7 +55,7 @@ public class DFSTrav {
             if(!visited[e.destination]){
                 dfs(graph, e.destination, visited);
             }
-        }
+        }       
     }
 
     public static void main(String[] args) {
