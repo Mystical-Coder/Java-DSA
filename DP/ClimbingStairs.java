@@ -39,7 +39,7 @@ public class ClimbingStairs {
     }
 
     public static void main(String[] args) {
-        int n = 5; // n = 3 -> 3 ways & n = 4 -> 5 ways then n = 5 -> 8 ways
+        int n = 4; // n = 3 -> 3 ways & n = 4 -> 5 ways then n = 5 -> 8 ways
         // System.out.println(countWays(n));
         int[] dp = new int[n + 1];
         Arrays.fill(dp, -1);

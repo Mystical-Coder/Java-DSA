@@ -38,6 +38,20 @@ public class TrieImp {
         return curr.eow == true;
     }
 
+    public static boolean startsWtith(String word){
+
+        Node curr = root;
+
+        for(int level = 0; level < word.length(); level++){
+            int idx = word.charAt(level) - 'a';
+            if(curr.children[idx] == null){
+                return false;
+            }
+            curr = curr.children[idx];
+        }
+        return curr.eow == false;
+    }
+
     public static void main(String[] args) {
         String word[] = {"the", "a", "there", "their", "any", "thee"};
         for(int i = 0; i < word.length; i++){
