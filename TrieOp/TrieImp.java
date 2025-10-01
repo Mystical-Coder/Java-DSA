@@ -49,7 +49,7 @@ public class TrieImp {
             }
             curr = curr.children[idx];
         }
-        return curr.eow == false;
+        return true;
     }
 
     public static void main(String[] args) {
@@ -59,5 +59,6 @@ public class TrieImp {
         }
         System.out.println(search("the"));
         System.out.println(search("thor"));
+        System.out.println(startsWtith("there"));
     }
 }
