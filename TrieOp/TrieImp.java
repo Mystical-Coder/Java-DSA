@@ -1,5 +1,8 @@
 package TrieOp;
 
+import java.util.ArrayList;
+
+
 public class TrieImp {
 
     static class Node{
@@ -38,7 +41,7 @@ public class TrieImp {
         return curr.eow == true;
     }
 
-    public static boolean startsWtith(String word){
+    public static boolean startsWith(String word){
 
         Node curr = root;
 
@@ -53,12 +56,7 @@ public class TrieImp {
     }
 
     public static void main(String[] args) {
-        String word[] = {"the", "a", "there", "their", "any", "thee"};
-        for(int i = 0; i < word.length; i++){
-            insert(word[i]);
-        }
-        System.out.println(search("the"));
-        System.out.println(search("thor"));
-        System.out.println(startsWtith("there"));
+        StringBuilder sb = new StringBuilder("Hello");
+        System.out.println(sb.insert(0, "V"));
     }
 }
